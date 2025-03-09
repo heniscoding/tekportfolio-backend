@@ -7,6 +7,12 @@ const router = express.Router();
 router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
+
+    // Prepend the base URL to the image paths
+    projects.forEach((project) => {
+      project.image = `${req.protocol}://${req.get('host')}${project.image}`;
+    });
+
     res.json(projects);
   } catch (err) {
     res.status(500).json({ message: err.message });

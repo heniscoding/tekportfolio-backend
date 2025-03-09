@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const bodyParser = require("body-parser");
@@ -15,51 +16,58 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.use("/api/projects", projectRoutes);
+app.use(express.static(path.join(__dirname, "public")));
 
 // Seed data function
 const seedData = async () => {
   const demoProjects = [
     {
-      title: "Portfolio Website",
-      description: "A personal portfolio built with React and Tailwind.",
+      title: "Community Events Platform",
+      description:
+        "Working as a freelance consultant to deliver a bespoke Software Engineering product for internal development, as part of the Launchpad project.",
       techStack: ["React", "Tailwind", "Node.js"],
-      link: "https://github.com/portfolio-website",
-      image: "https://via.placeholder.com/300?text=Portfolio+Website",
+      link: "https://community-events.henryalderslade.com/",
+      image: "/images/projects/communityevents.jpg",
     },
     {
-      title: "E-Commerce App",
-      description: "An e-commerce platform with user authentication.",
-      techStack: ["React", "Express", "MongoDB"],
-      link: "https://github.com/ecommerce-app",
-      image: "https://via.placeholder.com/300?text=E-Commerce+App",
+      title: "Chora Coaching Platform",
+      description:
+        "A freelance project for a group of coaches, built on the WordPress platform",
+      techStack: ["WordPress"],
+      link: "https://choracoaching.com/",
+      image: "/images/projects/choracoaching.jpg",
     },
     {
-      title: "Blog Platform",
-      description: "A blog platform with markdown support.",
+      title: "Deal Chasers - A community driven deals app",
+      description:
+        "Deal chasers is community-powered deals, discounts and offers app that runs on both Android and iOS. ",
       techStack: ["Next.js", "Node.js", "MongoDB"],
-      link: "https://github.com/blog-platform",
-      image: "https://via.placeholder.com/300?text=Blog+Platform",
+      link: "https://northcoders.com/project-phase/deal-chasers",
+      image: "/images/projects/codecrafters.jpg",
     },
     {
-      title: "Task Management Tool",
-      description: "A task management tool with drag-and-drop functionality.",
+      title: "Northcoders News Front End: A Social News Platform",
+      description:
+        "Northcoders News is a dynamic web application built with React, serving as a platform for news aggregation, content rating, and discussion.",
       techStack: ["React", "Redux", "Firebase"],
-      link: "https://github.com/task-manager",
-      image: "https://via.placeholder.com/300?text=Task+Manager",
+      link: "https://fe-nc-news.henryalderslade.com/",
+      image: "/images/projects/ncnewsfront.jpg",
     },
     {
-      title: "Weather Dashboard",
-      description: "A weather dashboard using OpenWeather API.",
+      title: "Northcoders News Back End: A Social News Platform",
+      description:
+        "built an API for the purpose of accessing application data programmatically.",
       techStack: ["React", "API Integration", "CSS"],
-      link: "https://github.com/weather-dashboard",
-      image: "https://via.placeholder.com/300?text=Weather+Dashboard",
+      link: "https://be-nc-news.henryalderslade.com/api/articles",
+      image: "/images/projects/ncnewsback.jpg",
     },
     {
-      title: "Chat Application",
-      description: "A real-time chat application using Socket.io.",
-      techStack: ["Node.js", "Express", "Socket.io"],
-      link: "https://github.com/chat-application",
-      image: "https://via.placeholder.com/300?text=Chat+Application",
+      title: "Monica Hanaway WordPress Build and hosting",
+      description:
+        "Redesigned, built and hosted Monica's existing WordPress website as part of a freelance project",
+      techStack: ["WordPress"],
+      link: "https://monicahanaway.com/",
+      image: "/images/projects/monicahanaway.jpg",
     },
   ];
 
