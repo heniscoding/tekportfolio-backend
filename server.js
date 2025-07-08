@@ -72,8 +72,13 @@ const seedData = async () => {
   ];
 
   try {
-    await Project.deleteMany(); // Clear the database
-    await Project.insertMany(demoProjects); // Seed with new projects
+    await Project.deleteMany(); // Clear existing data
+
+    for (const projectData of demoProjects) {
+      const project = new Project(projectData);
+      await project.save(); // This triggers the .pre('save') hook to generate slugs
+    }
+
     console.log("Database seeded with demo projects!");
   } catch (error) {
     console.error("Error seeding database:", error);
