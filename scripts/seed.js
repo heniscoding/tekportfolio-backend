@@ -9,8 +9,16 @@ const seedData = async () => {
       description:
         "This personal side project is a command-line Python tool that monitors Ethereum's price movements and technical indicators in real time, sending actionable trading alerts directly to Telegram. Built using the CoinGecko API, TA-Lib (via the `ta` package), and Telegram's Bot API, the bot detects key signals such as price spikes, RSI overbought/oversold zones, and moving average crossovers. It's designed to run continuously, checking price data every few minutes and notifying traders of potential market opportunities.\n\nThe bot includes command-line configuration for custom alert thresholds and intervals, and keeps a rolling 24-hour price history using Python's deque. It was a fun and insightful project to improve my understanding of financial data analysis, automation, and API integration. I use it for my own trading workflow to stay informed of major ETH market shifts as they happen.",
       techStack: ["Python", "CoinGecko API", "Telegram Bot API", "TA-Lib (ta)"],
-      link: "", // Optional: add GitHub repo or demo if hosted
-      image: "/images/projects/ethbot.png", // Make sure this matches the generated image filename path
+      link: "",
+      image: "/images/projects/ethbot.png",
+    },
+    {
+      title: "Vinted Deal Scraper & Discord Alert Bot",
+      description:
+        "This project is an automated deal-finding bot that scrapes Vinted listings in real-time and sends alerts to Discord channels when new items match specific criteria. It was built using Puppeteer, Node.js, and Discord webhooks. The scraper supports multiple search terms (like Nike, Stussy, Supreme), applies strict filters (price, condition, rating), and avoids duplicates across restarts using a persistent seen-listings log.\n\nIt features robust logic for excluding undesirable listings, intelligently parses listing details (size, condition, upload date, user rating), and handles errors gracefully. Designed for sneakerheads and resellers, the tool runs efficiently headless, blocks unnecessary assets for speed, and has proven effective in surfacing valuable new listings seconds after posting. I use it regularly to monitor trends and deals across fashion categories.",
+      techStack: ["Node.js", "Puppeteer", "Discord API", "JavaScript"],
+      link: "",
+      image: "/images/projects/vintedbot.png",
     },
     {
       title: "Community Events Platform (Launchpad Project)",
