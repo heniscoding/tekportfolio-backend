@@ -5,7 +5,7 @@ const projectSchema = new mongoose.Schema({
   slug: { type: String, unique: true }, // New
   description: { type: String, required: true },
   techStack: [String],
-  link: { type: String, required: true },
+  link: { type: String, required: false },
   image: { type: String },
 });
 

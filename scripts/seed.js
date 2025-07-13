@@ -5,6 +5,14 @@ const Project = require("../models/Project");
 const seedData = async () => {
   const demoProjects = [
     {
+      title: "Ethereum Alert Bot – Real-Time Telegram Notifications",
+      description:
+        "This personal side project is a command-line Python tool that monitors Ethereum's price movements and technical indicators in real time, sending actionable trading alerts directly to Telegram. Built using the CoinGecko API, TA-Lib (via the `ta` package), and Telegram's Bot API, the bot detects key signals such as price spikes, RSI overbought/oversold zones, and moving average crossovers. It's designed to run continuously, checking price data every few minutes and notifying traders of potential market opportunities.\n\nThe bot includes command-line configuration for custom alert thresholds and intervals, and keeps a rolling 24-hour price history using Python's deque. It was a fun and insightful project to improve my understanding of financial data analysis, automation, and API integration. I use it for my own trading workflow to stay informed of major ETH market shifts as they happen.",
+      techStack: ["Python", "CoinGecko API", "Telegram Bot API", "TA-Lib (ta)"],
+      link: "", // Optional: add GitHub repo or demo if hosted
+      image: "/images/projects/ethbot.png", // Make sure this matches the generated image filename path
+    },
+    {
       title: "Community Events Platform (Launchpad Project)",
       description:
         "As part of a paid 4-week consultancy with Launchpad, a Tech Returners initiative, I designed and developed a responsive web application for managing community events. The platform enables local organisations to create and promote events, while allowing users to register, add events to their Google Calendar, and optionally pay for participation. Built using React, Tailwind, and Node.js, the app integrates third-party APIs including Google Calendar and was delivered with full documentation for deployment and local development.\n\nThis project focused on user accessibility, clean UI/UX, and clear error handling throughout the app. I worked independently on both the frontend and backend, prioritising scalability, responsiveness, and secure data handling. The finished product was successfully hosted on a public platform and was used to demonstrate my full-stack capabilities to potential employers. It served as a strong portfolio piece and was very well received by the programme organisers.",
