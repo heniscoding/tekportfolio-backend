@@ -3,17 +3,24 @@ const Project = require('../models/Project');
 
 const router = express.Router();
 
+// Base URL for images
+const BASE_IMAGE_URL = 'https://tekportfolio-backend.onrender.com';
+
 // GET all projects
 router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
 
-    // Prepend the base URL to the image paths
-    projects.forEach((project) => {
-      project.image = `${req.protocol}://${req.get('host')}${project.image}`;
+    // Safely convert each project and prepend full image URL
+    const fullUrlProjects = projects.map((project) => {
+      const projectObj = project.toObject();
+      if (projectObj.image && projectObj.image.startsWith('/')) {
+        projectObj.image = `${BASE_IMAGE_URL}${projectObj.image}`;
+      }
+      return projectObj;
     });
 
-    res.json(projects);
+    res.json(fullUrlProjects);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
