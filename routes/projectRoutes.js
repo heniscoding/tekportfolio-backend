@@ -11,17 +11,37 @@ router.get('/', async (req, res) => {
   try {
     const projects = await Project.find();
 
-    // Safely convert each project and prepend full image URL
     const fullUrlProjects = projects.map((project) => {
-      const projectObj = project.toObject();
-      if (projectObj.image && projectObj.image.startsWith('/')) {
-        projectObj.image = `${BASE_IMAGE_URL}${projectObj.image}`;
+      const p = project.toObject();
+      if (p.image && p.image.startsWith('/')) {
+        p.image = `${BASE_IMAGE_URL}${p.image}`;
       }
-      return projectObj;
+      return p;
     });
 
     res.json(fullUrlProjects);
   } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+// NEW: GET a single project by slug
+router.get('/:slug', async (req, res) => {
+  try {
+    const project = await Project.findOne({ slug: req.params.slug });
+    if (!project) {
+      // No project found → return a 404
+      return res.status(404).json({ message: 'Project not found' });
+    }
+
+    const p = project.toObject();
+    if (p.image && p.image.startsWith('/')) {
+      p.image = `${BASE_IMAGE_URL}${p.image}`;
+    }
+
+    res.json(p);
+  } catch (err) {
+    // If there's a server error, send a 500
     res.status(500).json({ message: err.message });
   }
 });
