@@ -26,9 +26,11 @@ app.use("/api/projects/*", (req, res) => {
 // Serve static assets from the public folder (React build)
 app.use(express.static(path.join(__dirname, "public")));
 
-// Catch-all: send back index.html for client-side routing
+// Catch-all: send back index.html with a 404 status for client-side routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, "public", "index.html"));
+  res
+    .status(404)
+    .sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Global error handler
