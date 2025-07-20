@@ -16,7 +16,7 @@ const seedData = async () => {
         "Documentary-Style Filming",
       ],
       link: "",
-      image: "/images/projects/oxford-mediation.png",
+      image: "/images/projects/oxford-mediation.jpg",
     },
     {
       title: "Ethereum Alert Bot – Real-Time Telegram Notifications",
