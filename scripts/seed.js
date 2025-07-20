@@ -56,7 +56,7 @@ const seedData = async () => {
         "Deal Chasers is a cross-platform mobile web app that allows users to share, vote on, and discover the best deals from around the web and local communities. Built in a team of four during the Northcoders project phase, the app combines a modern, intuitive interface with robust full-stack functionality. I contributed to both the frontend and backend, working with technologies including Next.js, Node.js, and MongoDB to deliver a responsive and engaging user experience.\n\nKey features include user authentication, real-time deal submissions, voting, and dynamic filtering of content. The project was delivered under tight time constraints, requiring close collaboration, agile planning, and shared Git workflows. It was an excellent opportunity to demonstrate both technical breadth and team-based problem-solving, and resulted in a working MVP deployed for public use.",
       techStack: ["Next.js", "Node.js", "MongoDB"],
       link: "https://northcoders.com/project-phase/deal-chasers",
-      image: "/images/projects/codecrafters.jpg",
+      image: "/images/projects/deal-chasers.jpg",
     },
     {
       title: "Northcoders News – Social News Frontend",
