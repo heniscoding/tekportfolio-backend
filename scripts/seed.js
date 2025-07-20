@@ -32,7 +32,7 @@ const seedData = async () => {
         "This project is an automated deal-finding bot that scrapes Vinted listings in real-time and sends alerts to Discord channels when new items match specific criteria. It was built using Puppeteer, Node.js, and Discord webhooks. The scraper supports multiple search terms (like Nike, Stussy, Supreme), applies strict filters (price, condition, rating), and avoids duplicates across restarts using a persistent seen-listings log.\n\nIt features robust logic for excluding undesirable listings, intelligently parses listing details (size, condition, upload date, user rating), and handles errors gracefully. Designed for sneakerheads and resellers, the tool runs efficiently headless, blocks unnecessary assets for speed, and has proven effective in surfacing valuable new listings seconds after posting. I use it regularly to monitor trends and deals across fashion categories.",
       techStack: ["Node.js", "Puppeteer", "Discord API", "JavaScript"],
       link: "",
-      image: "/images/projects/vintedbot.png",
+      image: "/images/projects/vintedbot.jpg",
     },
     {
       title: "Community Events Platform (Launchpad Project)",
