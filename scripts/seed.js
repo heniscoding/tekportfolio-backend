@@ -10,13 +10,13 @@ const seedData = async () => {
         "For this project, I was brought in to document the final three days of a five-day accredited training course in Psychologically Informed Mediation, hosted at The Queen’s College, Oxford and delivered by M&D Associates. Across those three days, I captured over 36 hours of content—including 4 hours of introductory material and 32 hours of live, multi-room training sessions.\n\nArmed with a pair of Deity 4D Duo microphones, I focused on capturing clean, spatial audio during small-group mediation roleplays and class discussions. For visuals, I used 2 Osmo Action 4 camera's to discreetly record wide-angle footage in two beautiful and historically rich rooms—the Harold Wilson Room and the Memorial Room—adding atmosphere without being intrusive.\n\nThe course blends elements of psychotherapy, coaching, and counselling into mediation practice. My job was to film it all in a way that felt authentic and respectful, while producing content that could be used for training, reflection, and promotion. It was a rewarding challenge to capture the subtle, human moments of learning in such a stunning academic setting.\n\nIn the end, I delivered a clean, professional media package—ready for both internal use and public sharing—while soaking in a bit of that Oxford magic myself.",
       techStack: [
         "Deity 4D Duo Microphones",
-        "Osmo Action Camera",
-        "Adobe Premiere Pro",
-        "Multi-Room Audio Recording",
-        "Documentary-Style Filming",
+        "DJI Mic 2 - Wireless Microphones",
+        "DJI Osmo Action 4 Cameras",
+        "DaVinci Resolve",
+        "DJI Mimo App"
       ],
       link: "",
-      image: "/images/projects/oxford-mediation.jpg",
+      image: "/images/projects/oxford-mediation-project.jpg",
     },
     {
       title: "Ethereum Alert Bot – Real-Time Telegram Notifications",
