@@ -48,7 +48,7 @@ const seedData = async () => {
         "I designed and developed a bespoke WordPress website for Chora Coaching, a newly formed team of professional coaches and mediators. Built using the Divi theme with custom layouts and branding, the site was created to showcase coaching services, share the team’s story, and establish a credible online presence. The design focused on clarity, warmth, and trust-building, reflecting the ethos of the team and their approach to coaching and mediation.\n\nIn addition to the design and development, I managed the full launch and support process, including content strategy, SEO optimisation, performance tuning, hosting, and backups. I also trained the team on how to manage content themselves using the WordPress dashboard. The feedback from all the coaches was extremely positive, and I continue to provide ongoing support and maintenance for the site.",
       techStack: ["WordPress", "Divi"],
       link: "https://choracoaching.com/",
-      image: "/images/projects/chora-coaching.jpg",
+      image: "/images/projects/chora-build.jpg",
     },
     {
       title: "Deal Chasers – Community-Powered Deals App",
