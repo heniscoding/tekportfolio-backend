@@ -24,7 +24,7 @@ const seedData = async () => {
         "This personal side project is a command-line Python tool that monitors Ethereum's price movements and technical indicators in real time, sending actionable trading alerts directly to Telegram. Built using the CoinGecko API, TA-Lib (via the `ta` package), and Telegram's Bot API, the bot detects key signals such as price spikes, RSI overbought/oversold zones, and moving average crossovers. It's designed to run continuously, checking price data every few minutes and notifying traders of potential market opportunities.\n\nThe bot includes command-line configuration for custom alert thresholds and intervals, and keeps a rolling 24-hour price history using Python's deque. It was a fun and insightful project to improve my understanding of financial data analysis, automation, and API integration. I use it for my own trading workflow to stay informed of major ETH market shifts as they happen.",
       techStack: ["Python", "CoinGecko API", "Telegram Bot API", "TA-Lib (ta)"],
       link: "",
-      image: "/images/projects/ethbot.png",
+      image: "/images/projects/ethalerts.jpg",
     },
     {
       title: "Vinted Deal Scraper & Discord Alert Bot",
